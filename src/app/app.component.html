@@ -1,10 +1,16 @@
 <h2>practica</h2>
-<div><input type="number" [(ngModel)]="numero1" /> {{ numero1 }}</div>
-<div><input type="number" [(ngModel)]="numero2" /> {{ numero2 }}</div>
+<div>
+  <label for="">num 1: </label>
+  <input type="number" [(ngModel)]="numero1" />
+</div>
+<div>
+  <label for="">num 2: </label>
+  <input type="number" [(ngModel)]="numero2" />
+</div>
 <div>
   <button (click)="sumar()">Sumar</button>
 </div>
-<div><input type="text" [(ngModel)]="resultado" /> {{ resultado }}</div>
+<div>Sumar: {{ resultado }}</div>
 
 <h2>ej 01</h2>
 
@@ -17,25 +23,20 @@ botones "calcular" y "limpiar cuadros de textos"
  -->
 <div>
   <label for="">edad 1: </label>
-  <input type="number" min="0" max="100" [(ngModel)]="edad1" /> {{ edad1 }}
+  <input type="number" min="0" max="100" [(ngModel)]="edad1" />
 </div>
 <div>
   <label for="">edad 2: </label>
-  <input type="number" min="0" max="100" [(ngModel)]="edad2" /> {{ edad2 }}
+  <input type="number" min="0" max="100" [(ngModel)]="edad2" />
 </div>
 <div>
   <button (click)="calcular()">Calcular</button>
 </div>
 <div>
-  <label for="">promedio: </label>
-  <input type="number" min="0" max="100" [(ngModel)]="promedio" />
-  {{ promedio }}
+  <label for="">promedio: {{ promedio }}</label>
 </div>
 <div>
-  <label for="">suma: </label>
-
-  <input type="number" min="0" max="100" [(ngModel)]="sumaEdad" />
-  {{ sumaEdad }}
+  <label for="">suma: {{ sumaEdad }}</label>
 </div>
 <div>
   <button (click)="limpiar()">Limpiar</button>
