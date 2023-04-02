@@ -1,4 +1,3 @@
-<router-outlet></router-outlet>
 <h2>practica</h2>
 <div><input type="number" [(ngModel)]="numero1" /> {{ numero1 }}</div>
 <div><input type="number" [(ngModel)]="numero2" /> {{ numero2 }}</div>
@@ -53,3 +52,10 @@ el componente "error"
 ( dejar los componentes listos)
 opcional: hacer ruteo
  -->
+<nav>
+  <ul>
+    <li><a href="/">Bienvenido</a></li>
+    <li><a href="/login">Login</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
