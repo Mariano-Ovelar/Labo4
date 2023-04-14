@@ -1,4 +1,6 @@
 export class Usuario {
-  nombre: string = ""
-  clave: string = "";
+/*   nombre: string = ""
+  clave: string = ""; */
+  password: string = "";
+  email: string = "";
 }

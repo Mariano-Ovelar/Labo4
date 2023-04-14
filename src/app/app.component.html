@@ -1,63 +1,6 @@
-<h2>practica</h2>
-<div>
-  <label for="">num 1: </label>
-  <input type="number" [(ngModel)]="numero1" />
-</div>
-<div>
-  <label for="">num 2: </label>
-  <input type="number" [(ngModel)]="numero2" />
-</div>
-<div>
-  <button (click)="calcular('numero')">Sumar</button>
-</div>
-<div>Sumar: {{ resultado }}</div>
-
-<h2>ej 01</h2>
-
-<!--
-  1- (app.component.html) Realizar:
-una aplicacion que se le ingresen dos edades en dos cuadro de textos
-edadUno, EdadDos
-mostrar el promedio y la suma en dos cuadros de textos nuevos
-botones "calcular" y "limpiar cuadros de textos"
- -->
-<div>
-  <label for="">edad 1: </label>
-  <input type="number" min="0" max="100" [(ngModel)]="edad1" />
-</div>
-<div>
-  <label for="">edad 2: </label>
-  <input type="number" min="0" max="100" [(ngModel)]="edad2" />
-</div>
-<div>
-  <button (click)="calcular('edad')">Calcular</button>
-</div>
-<div>
-  <label for="">promedio: {{ promedioEdad }}</label>
-</div>
-<div>
-  <label for="">suma: {{ sumaEdad }}</label>
-</div>
-<div>
-  <button (click)="limpiar()">Limpiar</button>
-</div>
-
-<h2>ej 02</h2>
-
-<!--
-  2-( componentes nuevos) Realizar:
-la clase usuario con nombre y clave ,
-el componente "Bienvenido"
-el componente "login"
-el componente "error"
-( dejar los componentes listos)
-opcional: hacer ruteo
- -->
-
-<nav>
-  <ul>
-    <li><a href="/">Bienvenido</a></li>
-    <li><a href="/login">Login</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<header>
+  <app-navbar></app-navbar>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

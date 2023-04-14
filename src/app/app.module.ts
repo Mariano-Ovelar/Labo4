@@ -7,20 +7,36 @@ import { AppComponent } from './app.component';
 import { BienvenidoComponent } from './Componentes/bienvenido/bienvenido.component';
 import { LoginComponent } from './Componentes/login/login.component';
 import { ErrorComponent } from './Componentes/error/error.component';
-
+import { Clase02Component } from './clases/clase02/clase02.component';
+import { Clase01Component } from './clases/clase01/clase01.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterComponent } from './componentes/register/register.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     BienvenidoComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    Clase02Component,
+    Clase01Component,
+    NavbarComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      progressBar: true,
+      progressAnimation: 'increasing',
+      closeButton: true
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

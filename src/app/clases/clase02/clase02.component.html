@@ -1,0 +1,20 @@
+<!-- 
+    Dos inputs para ingresar nombre y apellido
+Botón que los concatene y muestre en otra parte
+ -->
+<div>
+  <label for="">Nombre: </label>
+  <input type="text" [(ngModel)]="nombre" />
+</div>
+<div>
+  <label for="">Apellido: </label>
+  <input type="text" [(ngModel)]="apellido" />
+</div>
+
+<div>
+    <button (click)="mostrar()">Mostrar</button>
+  </div>
+
+  <div>
+    <h3>Nombre y Apellido: {{ resultado }}</h3>
+  </div>
