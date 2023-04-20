@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Usuario } from 'src/app/Class/usuario';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,31 +14,19 @@ export class LoginComponent {
     password: '',
   };
   peopleStorage: Usuario[] = [];
-  personas: Usuario[] = [
-    {
-      email: 'marianoovelar200@gmail.com',
-      password: '123456789',
-    },
-    {
-      email: 'juancarlos@gmail.com',
-      password: '123456789',
-    },
-  ];
 
-  constructor(private toastrSvc: ToastrService) {}
+  constructor(private toastrSvc: ToastrService, private router: Router) {}
 
-  guardar() {
-    localStorage.setItem('personas', JSON.stringify(this.personas));
-  }
   estaElUsuario() {
     this.peopleStorage = JSON.parse(String(localStorage.getItem('personas')));
     if (
       this.peopleStorage.some((persona: Usuario) => {
         return JSON.stringify(persona) === JSON.stringify(this.user);
       })
-    )
+    ) {
       this.toastrSvc.success(`Bienvenido ${this.user.email}`, 'Login Exitoso');
-    else {
+      this.router.navigateByUrl('/');
+    } else {
       this.toastrSvc.error(`No se pudo encontrar al usuario`, 'Error');
     }
   }

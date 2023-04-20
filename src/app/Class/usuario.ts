@@ -1,6 +1,7 @@
 export class Usuario {
-/*   nombre: string = ""
+  /*   nombre: string = ""
   clave: string = ""; */
-  password: string = "";
-  email: string = "";
+  password: string = '';
+  email: string = '';
+  confirmPassword?: string = '';
 }

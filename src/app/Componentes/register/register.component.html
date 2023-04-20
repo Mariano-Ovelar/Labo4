@@ -1,1 +1,66 @@
-<p>register works!</p>
+<main class="form-signin w-100 m-auto">
+  <form class="text-center">
+    <img
+      class="mb-4"
+      src="../../../assets/UTN Logo.png"
+      alt="UTN Logo"
+      width="100"
+      height="110"
+    />
+    <h1 class="h3 mb-3 fw-normal">Registro de usuario</h1>
+
+    <div class="form-floating">
+      <input
+        name="email"
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+        [(ngModel)]="user.email"
+      />
+      <label for="floatingInput">Correo</label>
+    </div>
+
+    <div class="form-floating">
+      <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        [(ngModel)]="user.password"
+      />
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+
+   <!--  <div class="form-floating">
+      <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        [(ngModel)]="user.confirmPassword"
+      />
+      <label for="floatingPassword">Confirmar Contraseña</label>
+    </div> -->
+    <!--  <div class="checkbox mb-3">
+        <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+      </div> -->
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      (click)="estaElUsuario()"
+    >
+      Registrarme
+    </button>
+ <button
+      class="w-100 btn btn-lg btn-success"
+      type="submit"
+      (click)="guardar()"
+    >
+      Cargar usurios al localstorage
+    </button> 
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+  </form>
+</main>

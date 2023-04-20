@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomInputComponent } from './shared/components/custom-input/custom-input.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     Clase01Component,
     NavbarComponent,
     RegisterComponent,
+    CustomInputComponent,
   ],
   imports: [
     BrowserModule,

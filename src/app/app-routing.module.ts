@@ -7,6 +7,7 @@ import { Clase02Component } from './clases/clase02/clase02.component';
 import { Clase01Component } from './clases/clase01/clase01.component';
 import { RegisterComponent } from './componentes/register/register.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -29,8 +30,12 @@ const routes: Routes = [
     component: Clase02Component
   },
   {
-    path: '**',
+    path: '404',
     component: ErrorComponent
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   },
 ];
 
