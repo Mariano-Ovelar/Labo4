@@ -1,0 +1,30 @@
+<!-- === Listado === -->
+
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+  <div class="container-fluid py-5">
+    <app-componente-listado
+      [listaRecibida]="listaProductos"
+      (productoSelecionado)="MostrarDetalle($event)"
+    ></app-componente-listado>
+  </div>
+</div>
+
+<div class="row align-items-md-stretch">
+  <!-- === Guardar === -->
+  <div class="col-md-6">
+    <div class="h-100 p-5 text-bg-dark rounded-3">
+      <h2>Agregar producto</h2>
+      <app-componente-alta
+        (creamosUnProducto)="guardar($event)"
+      ></app-componente-alta>
+    </div>
+  </div>
+
+  <!-- === Detalle === -->
+  <div class="col-md-6">
+    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+      <h2>Detalle del producto</h2>
+      <app-componente-detalle [productoRecibido]="productoSeleccionado"></app-componente-detalle>
+    </div>
+  </div>
+</div>

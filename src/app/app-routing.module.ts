@@ -6,6 +6,8 @@ import { LoginComponent } from './Componentes/login/login.component';
 import { Clase02Component } from './clases/clase02/clase02.component';
 import { Clase01Component } from './clases/clase01/clase01.component';
 import { RegisterComponent } from './componentes/register/register.component';
+import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import { MainComponent } from './ejemploInputOutput/page/main/main.component';
 
 
 const routes: Routes = [
@@ -28,6 +30,14 @@ const routes: Routes = [
   {
     path: 'clase02',
     component: Clase02Component
+  },
+  {
+    path: 'acerca-de',
+    component: AcercaDeComponent
+  },
+  {
+    path: 'main',
+    component: MainComponent
   },
   {
     path: '404',

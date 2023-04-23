@@ -14,6 +14,11 @@ import { RegisterComponent } from './componentes/register/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomInputComponent } from './shared/components/custom-input/custom-input.component';
+import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import { MainComponent } from './ejemploInputOutput/page/main/main.component';
+import { ComponenteListadoComponent } from './ejemploInputOutput/componente/componente-listado/componente-listado.component';
+import { ComponenteAltaComponent } from './ejemploInputOutput/componente/componente-alta/componente-alta.component';
+import { ComponenteDetalleComponent } from './ejemploInputOutput/componente/componente-detalle/componente-detalle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +30,11 @@ import { CustomInputComponent } from './shared/components/custom-input/custom-in
     NavbarComponent,
     RegisterComponent,
     CustomInputComponent,
+    AcercaDeComponent,
+    MainComponent,
+    ComponenteListadoComponent,
+    ComponenteAltaComponent,
+    ComponenteDetalleComponent,
   ],
   imports: [
     BrowserModule,

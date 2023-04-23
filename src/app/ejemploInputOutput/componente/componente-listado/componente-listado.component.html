@@ -1,0 +1,7 @@
+<li *ngFor="let producto of listaRecibida">
+    Marca: {{producto.marca}} |
+    Precio: {{producto.precio}} |
+    Stock: {{producto.stock}}
+    <button class="btn btn-outline-primary" type="button" (click)="MostrarDetalle(producto)">Click</button>
+</li>
+
