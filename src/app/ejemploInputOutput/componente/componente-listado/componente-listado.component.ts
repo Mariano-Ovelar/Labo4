@@ -8,8 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ComponenteListadoComponent {
   @Input() listaRecibida!: any[];
   @Output() productoSelecionado: EventEmitter<any> = new EventEmitter<any>();
+  @Output() productoModificar: EventEmitter<any> = new EventEmitter<any>();
   constructor() {}
-  MostrarDetalle(producto: any) {
+  mostrarDetalle(producto: any) {
     this.productoSelecionado.emit(producto);
+  }
+  modificar(producto: any){
+    this.productoModificar.emit(producto);
   }
 }

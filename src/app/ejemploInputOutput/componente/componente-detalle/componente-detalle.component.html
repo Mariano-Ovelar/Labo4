@@ -1,7 +1,17 @@
-<div>
-    <label for="">Marca: {{productoRecibido.marca}}</label>
-    <br>
-    <label for="">Precio: {{productoRecibido.precio}}</label>
-    <br>
-    <label for="">Stock: {{productoRecibido.stock}}</label>
+<div class="text-start">
+  <div>
+    <label for="">Marca:</label>
+    <input type="text" disabled [(ngModel)]="productoRecibido.marca" />
+  </div>
+  <div>
+    <label for="">Precio:</label>
+    <input type="number" disabled [(ngModel)]="productoRecibido.precio" />
+  </div>
+  <div>
+    <label for="">Stock:</label>
+    <input type="number" disabled [(ngModel)]="productoRecibido.stock" />
+  </div>
 </div>
+<button class="btn btn-dark" type="button" (click)="limpiar()">
+  Limpiar
+</button>

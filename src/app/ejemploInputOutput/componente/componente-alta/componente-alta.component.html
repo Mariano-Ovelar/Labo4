@@ -1,9 +1,17 @@
-<input type="text" placeholder="Marca" [(ngModel)]="producto.marca" />
-<p></p>
-<input type="namber" placeholder="precio" [(ngModel)]="producto.precio" />
-<p></p>
-<input type="namber" placeholder="stock" [(ngModel)]="producto.stock" />
-<p></p>
-<button class="btn btn-outline-light" type="button" (click)="guardar()">
+<div class="text-start">
+  <div>
+    <label for="">Marca:</label>
+    <input type="text" [(ngModel)]="producto.marca" />
+  </div>
+  <div>
+    <label for="">Precio:</label>
+    <input type="number" [(ngModel)]="producto.precio" />
+  </div>
+  <div>
+    <label for="">Stock:</label>
+    <input type="number" [(ngModel)]="producto.stock" />
+  </div>
+</div>
+<button class="btn btn-dark" type="button" (click)="guardar()">
   Guardar
 </button>

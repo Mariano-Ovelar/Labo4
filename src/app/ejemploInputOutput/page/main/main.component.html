@@ -1,30 +1,48 @@
-<!-- === Listado === -->
-
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
-  <div class="container-fluid py-5">
+<div class="p-2 mb-4 bg-body-tertiary rounded-3">
+  <div class="container-fluid">
+    <!-- === Listado === -->
     <app-componente-listado
       [listaRecibida]="listaProductos"
-      (productoSelecionado)="MostrarDetalle($event)"
+      (productoSelecionado)="mostrarDetalle($event)"
+      (productoModificar)="modificar($event)"
     ></app-componente-listado>
+    <button class="btn btn-success" type="button" (click)="agregarProducto()">
+      Añadir producto
+    </button>
   </div>
 </div>
 
 <div class="row align-items-md-stretch">
-  <!-- === Guardar === -->
-  <div class="col-md-6">
-    <div class="h-100 p-5 text-bg-dark rounded-3">
-      <h2>Agregar producto</h2>
+  <div class="col-md-6" *ngIf="detalleActivado">
+    <div>
+      <h2 class="h-100 p-3 text-bg-dark rounded-3">Detalle</h2>
+      <!-- === Detalle === -->
+      <app-componente-detalle
+        [productoRecibido]="productoSeleccionado"
+      ></app-componente-detalle>
+    </div>
+  </div>
+  
+  <div class="col-md-6" *ngIf="altaActivado">
+    <div>
+      <h2 class="h-100 p-3 text-bg-success rounded-3">Guardar</h2>
+      <!-- === Guardar === -->
       <app-componente-alta
         (creamosUnProducto)="guardar($event)"
       ></app-componente-alta>
     </div>
   </div>
 
-  <!-- === Detalle === -->
-  <div class="col-md-6">
-    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-      <h2>Detalle del producto</h2>
-      <app-componente-detalle [productoRecibido]="productoSeleccionado"></app-componente-detalle>
+  <div class="col-md-6" *ngIf="modificarActivado">
+    <div>
+      <h2 class="h-100 p-3 text-bg-warning rounded-3">Modificar</h2>
+      <!-- === Modificar === -->
+      <app-componente-modificar
+      (productoModificado)="modificarProducto($event)"
+      [productoRecibido]="productoSeleccionado"
+      ></app-componente-modificar>
     </div>
   </div>
+
+  
 </div>

@@ -1,0 +1,27 @@
+<!-- <div>
+    <label for="">Marca: {{productoRecibido.marca}}</label>
+    <input type="text">
+    <label for="">Precio: {{productoRecibido.precio}}</label>
+    <input type="text">
+    <label for="">Stock: {{productoRecibido.stock}}</label>
+    <input type="text">
+</div> -->
+
+<div class="text-start">
+    <div>
+      <label for="">Marca:</label>
+      <input type="text" [(ngModel)]="producto.marca" >
+    </div>
+    <div>
+      <label for="">Precio:</label>
+      <input type="number" [(ngModel)]="producto.precio">
+    </div>
+    <div>
+      <label for="">Stock:</label>
+      <input type="number" [(ngModel)]="producto.stock">
+    </div>
+  </div>
+  <button class="btn btn-dark" type="button" (click)="modificar()">
+    Modificar
+  </button>
+  

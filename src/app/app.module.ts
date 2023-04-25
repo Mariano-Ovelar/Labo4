@@ -19,6 +19,7 @@ import { MainComponent } from './ejemploInputOutput/page/main/main.component';
 import { ComponenteListadoComponent } from './ejemploInputOutput/componente/componente-listado/componente-listado.component';
 import { ComponenteAltaComponent } from './ejemploInputOutput/componente/componente-alta/componente-alta.component';
 import { ComponenteDetalleComponent } from './ejemploInputOutput/componente/componente-detalle/componente-detalle.component';
+import { ComponenteModificarComponent } from './ejemploInputOutput/componente/componente-modificar/componente-modificar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { ComponenteDetalleComponent } from './ejemploInputOutput/componente/comp
     ComponenteListadoComponent,
     ComponenteAltaComponent,
     ComponenteDetalleComponent,
+    ComponenteModificarComponent,
   ],
   imports: [
     BrowserModule,

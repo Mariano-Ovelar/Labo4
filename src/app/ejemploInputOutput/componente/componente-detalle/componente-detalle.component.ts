@@ -7,5 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ComponenteDetalleComponent {
   @Input() productoRecibido!: any;
-  
+
+  limpiar(){
+    
+  }
 }
